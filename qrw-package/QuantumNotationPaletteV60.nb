@@ -1,0 +1,657 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     20941,        648]
+NotebookOptionsPosition[     14340,        485]
+NotebookOutlinePosition[     20886,        645]
+CellTagsIndexPosition[     20843,        642]
+WindowFrame->Palette
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox[
+     RowBox[{"Needs", "[", "\<\"Quantum`Notation`\"\>", "]"}]], 
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+       TagBox["\[Placeholder]",
+        jlgmKetArgs,
+        Editable->True,
+        Selectable->True], "\[RightAngleBracket]"}],
+      jlgmKet,
+      Editable->False,
+      Selectable->False]]},
+   {
+    ButtonBox[
+     RowBox[{"SetQuantumAliases", "[", "]"}]], 
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       TagBox["\[Placeholder]",
+        jlgmBraArgs,
+        Editable->True,
+        Selectable->True], "\[VerticalSeparator]"}],
+      jlgmBra,
+      Editable->False,
+      Selectable->False]]},
+   {
+    ButtonBox[
+     RowBox[{"$RecursionLimit", "=", "Infinity"}]], 
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox["\[Placeholder]",
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", "\[Placeholder]", "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox["\[Placeholder]",
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False]}]]},
+   {
+    ButtonBox[
+     OverscriptBox["\[Placeholder]", "^"]], 
+    ButtonBox[
+     RowBox[{
+      OverscriptBox["\[Placeholder]", "^"], "\[CenterDot]", 
+      "\[Placeholder]"}]]},
+   {
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+       TagBox[
+        SubscriptBox["\[Placeholder]", 
+         OverscriptBox["\[Placeholder]", "^"]],
+        jlgmKetArgs,
+        Editable->True,
+        Selectable->True], "\[RightAngleBracket]"}],
+      jlgmKet,
+      Editable->False,
+      Selectable->False]], 
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       TagBox[
+        SubscriptBox["\[Placeholder]", 
+         OverscriptBox["\[Placeholder]", "^"]],
+        jlgmBraArgs,
+        Editable->True,
+        Selectable->True], "\[VerticalSeparator]"}],
+      jlgmBra,
+      Editable->False,
+      Selectable->False]]},
+   {
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+       TagBox[
+        RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}],
+        jlgmKetArgs,
+        Editable->True,
+        Selectable->True], "\[RightAngleBracket]"}],
+      jlgmKet,
+      Editable->False,
+      Selectable->False]], 
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       TagBox[
+        RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}],
+        jlgmBraArgs,
+        Editable->True,
+        Selectable->True], "\[VerticalSeparator]"}],
+      jlgmBra,
+      Editable->False,
+      Selectable->False]]},
+   {
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[VerticalSeparator]", 
+       TagBox[
+        RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}],
+        jlgmKetArgs,
+        Editable->True,
+        Selectable->True], "\[RightAngleBracket]"}],
+      jlgmKet,
+      Editable->False,
+      Selectable->False]], 
+    ButtonBox[
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       TagBox[
+        RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}],
+        jlgmBraArgs,
+        Editable->True,
+        Selectable->True], "\[VerticalSeparator]"}],
+      jlgmBra,
+      Editable->False,
+      Selectable->False]]},
+   {
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox["\[Placeholder]",
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox["\[Placeholder]",
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False]}]], 
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox["\[Placeholder]",
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox["\[Placeholder]",
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False]}]]},
+   {
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False]}]], 
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False]}]]},
+   {
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         RowBox[{
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]], ",", 
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]]}],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         RowBox[{
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]], ",", 
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]]}],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False]}]], 
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         RowBox[{
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]], ",", 
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]]}],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         RowBox[{
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]], ",", 
+          SubscriptBox["\[Placeholder]", 
+           OverscriptBox["\[Placeholder]", "^"]]}],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False]}]]},
+   {
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False]}]], 
+    ButtonBox[
+     RowBox[{
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox[
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]],
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False]}]]},
+   {
+    ButtonBox[
+     RowBox[{"\[Placeholder]", "\[CenterDot]", "\[Placeholder]"}]], 
+    ButtonBox["\[CenterDot]"]},
+   {
+    ButtonBox[
+     SuperscriptBox[
+      RowBox[{"(", "\[Placeholder]", ")"}], "\[Dagger]"]], 
+    ButtonBox[
+     SuperscriptBox[
+      RowBox[{"(", "\[Placeholder]", ")"}], "*"]]},
+   {
+    ButtonBox[
+     RowBox[{"\[Psi]", " ", "/:", " ", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox["\[Psi]",
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "=", "\[Placeholder]"}]], 
+    ButtonBox[
+     RowBox[{"\[Psi]", " ", "/:", " ", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        TagBox["\[Psi]",
+         jlgmBraArgs,
+         Editable->True,
+         Selectable->True], "\[VerticalSeparator]"}],
+       jlgmBra,
+       Editable->False,
+       Selectable->False], ":=", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox["\[Psi]",
+           jlgmKetArgs,
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         jlgmKet,
+         Editable->False,
+         Selectable->False], ")"}], "\[Dagger]"]}]]},
+   {
+    ButtonBox[
+     RowBox[{"\[SelectionPlaceholder]", " ", "/:", " ", 
+      TagBox[
+       RowBox[{"\[VerticalSeparator]", 
+        TagBox["\[SelectionPlaceholder]",
+         jlgmKetArgs,
+         Editable->True,
+         Selectable->True], "\[RightAngleBracket]"}],
+       jlgmKet,
+       Editable->False,
+       Selectable->False], "=", "\[Placeholder]"}]], 
+    ButtonBox[
+     ButtonBox[
+      RowBox[{"\[SelectionPlaceholder]", " ", "/:", " ", 
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox["\[SelectionPlaceholder]",
+          jlgmBraArgs,
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        jlgmBra,
+        Editable->False,
+        Selectable->False], ":=", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         TagBox[
+          RowBox[{"\[VerticalSeparator]", 
+           TagBox["\[SelectionPlaceholder]",
+            jlgmKetArgs,
+            Editable->True,
+            Selectable->True], "\[RightAngleBracket]"}],
+          jlgmKet,
+          Editable->False,
+          Selectable->False], ")"}], "\[Dagger]"]}]]]}
+  },
+  GridBoxSpacings->{"Columns" -> {
+      Offset[0.27999999999999997`], {
+       Offset[0.]}, 
+      Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+      Offset[0.2], {
+       Offset[0.]}, 
+      Offset[0.2]}, "RowsIndexed" -> {}},
+  GridDefaultElement:>ButtonBox["\\[Placeholder]"]]], NotebookDefault,
+ CellMargins->{{Inherited, Inherited}, {5, Inherited}},
+ CellBracketOptions->{"Color"->RGBColor[0.269993, 0.308507, 0.6]},
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellHorizontalScrolling->True,
+ PageBreakAbove->True,
+ PageBreakWithin->False,
+ GroupPageBreakWithin->False,
+ CellLabelMargins->{{12, Inherited}, {Inherited, Inherited}},
+ DefaultFormatType->DefaultInputFormatType,
+ InputAutoReplacements->{
+  "->" -> "\[Rule]", ":>" -> "\[RuleDelayed]", "<=" -> "\[LessEqual]", ">=" -> 
+   "\[GreaterEqual]", "!=" -> "\[NotEqual]", "==" -> "\[Equal]", Inherited},
+ "TwoByteSyntaxCharacterAutoReplacement"->True,
+ HyphenationOptions->{"HyphenationCharacter"->"\[Continuation]"},
+ LineSpacing->{1.25, 0},
+ AutoItalicWords->{},
+ LanguageCategory->"Mathematica",
+ ScriptMinSize->9,
+ ShowStringCharacters->True,
+ NumberMarks->True,
+ LinebreakAdjustments->{0.85, 2, 10, 0, 1},
+ CounterIncrements->"Input",
+ StyleMenuListing->None,
+ FontFamily->"Courier",
+ FontWeight->"Bold"]
+},
+ClosingAutoSave->True,
+Editable->False,
+WindowToolbars->{},
+PageWidth->604,
+WindowSize->{Fit, Fit},
+WindowMargins->{{Automatic, 134}, {Automatic, 85}},
+WindowFrame->"Palette",
+WindowElements->{},
+WindowFrameElements->"CloseBox",
+WindowClickSelect->False,
+ScrollingOptions->{"PagewiseScrolling"->True,
+"VerticalScrollRange"->Fit},
+ShowCellBracket->False,
+ShowSelection->True,
+CellMargins->{{0, 0}, {Inherited, 0}},
+Active->True,
+CellOpen->True,
+ShowCellLabel->False,
+ShowCellTags->False,
+InputAliases->{
+ "on" -> "\[CenterDot]", "op" -> OverscriptBox["\[Placeholder]", "^"], "her" -> 
+  SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "\[Dagger]"], "con" -> 
+  SuperscriptBox[
+    RowBox[{"(", "\[Placeholder]", ")"}], "*"], "ket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+      "\[Placeholder]", jlgmKetArgs, Editable -> True, Selectable -> True], 
+      "\[RightAngleBracket]"}], jlgmKet, Editable -> False, Selectable -> 
+    False], "eket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmKet, Editable -> 
+    False, Selectable -> False], "eeket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmKet, Editable -> 
+    False, Selectable -> False], "eeeket" -> TagBox[
+    RowBox[{"\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmKet, Editable -> 
+    False, Selectable -> False], "braket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+      "\[Placeholder]", jlgmBraArgs, Editable -> True, Selectable -> True], 
+      "\[VerticalSeparator]", 
+      TagBox[
+      "\[Placeholder]", jlgmKetArgs, Editable -> True, Selectable -> True], 
+      "\[RightAngleBracket]"}], jlgmBraKet, Editable -> False, Selectable -> 
+    False], "ebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmBraKet, 
+    Editable -> False, Selectable -> False], "eebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmBraKet, 
+    Editable -> False, Selectable -> False], "eeebraket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmKetArgs, Editable -> 
+       True, Selectable -> True], "\[RightAngleBracket]"}], jlgmBraKet, 
+    Editable -> False, Selectable -> False], "bra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+      "\[Placeholder]", jlgmBraArgs, Editable -> True, Selectable -> True], 
+      "\[VerticalSeparator]"}], jlgmBra, Editable -> False, Selectable -> 
+    False], "ebra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]"}], jlgmBra, Editable -> 
+    False, Selectable -> False], "eebra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]"}], jlgmBra, Editable -> 
+    False, Selectable -> False], "eeebra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      TagBox[
+       RowBox[{
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]], ",", 
+         SubscriptBox["\[Placeholder]", 
+          OverscriptBox["\[Placeholder]", "^"]]}], jlgmBraArgs, Editable -> 
+       True, Selectable -> True], "\[VerticalSeparator]"}], jlgmBra, Editable -> 
+    False, Selectable -> False]},
+ImageMargins->{{0, Inherited}, {Inherited, 0}},
+Magnification->1,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[569, 21, 13767, 462, 284, NotebookDefault,
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ PageBreakAbove->True,
+ PageBreakWithin->False,
+ CounterIncrements->"Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
