@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    420925,       7512]
-NotebookOptionsPosition[    420335,       7489]
-NotebookOutlinePosition[    420679,       7504]
-CellTagsIndexPosition[    420636,       7501]
+NotebookDataLength[    421518,       7527]
+NotebookOptionsPosition[    420927,       7504]
+NotebookOutlinePosition[    421271,       7519]
+CellTagsIndexPosition[    421228,       7516]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1356,8 +1356,10 @@ Cell[BoxData[
        RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"{", 
-       RowBox[{"Dashed", ",", "Thin", ",", "Dotted", ",", "Thin"}], "}"}]}]}],
-     "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Dashed", ",", "Thin", ",", "Dotted", ",", "Thin"}], "}"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", "Medium", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{"v", ",", 
      RowBox[{"{", 
@@ -1378,7 +1380,10 @@ Cell[BoxData[
    3.5024993830625*^9, 3.502499383484375*^9}, {3.502499545046875*^9, 
    3.50249956071875*^9}, 3.502499760484375*^9, {3.50249985384375*^9, 
    3.50249985909375*^9}, {3.502500185546875*^9, 3.50250023075*^9}, {
-   3.502500286390625*^9, 3.502500487875*^9}}],
+   3.502500286390625*^9, 3.502500487875*^9}, {3.502540258921875*^9, 
+   3.502540275140625*^9}, {3.502540920328125*^9, 3.50254092740625*^9}, {
+   3.50254126021875*^9, 3.502541274640625*^9}, {3.5025446873125*^9, 
+   3.502544704875*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2056,6 +2061,7 @@ B9oqJ7YwjwoLhF6aK/L58FA97eyaX1RA7ldaKyf4UPJn0HZEkAaX2/Y4OU/z
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.1},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.10209763506349985`, 0.5327763101559686}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -2709,6 +2715,7 @@ EBYI63u5ug3+B+rKh2o=
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.17167095026856288`, 0.42078060417432267`}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -3351,6 +3358,7 @@ pQ9kuPRtv4fnHB9m6fyZ1V/J8P//Z0OnQ2/juDgF/gfrwWJP
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.16917958789389825`, 0.36339048500269694`}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -3981,6 +3989,7 @@ CLj6da+r2xwXBP0/Lp/mEvD//+dCa1SbwBvJFvg/HMf8lg==
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.18},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.17910665891067756`, 0.3296138945563815}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -4569,6 +4578,7 @@ ktU=
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.1873527468001862, 0.32812430382779895`}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -5223,6 +5233,7 @@ dDK86+00D4arq4qVtrRC2GcLL+85/PnwN69kw1b4//8DwPFui0teXq3wPxBg
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.1871514839378687, 0.32801326097670985`}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -5882,6 +5893,7 @@ q6V6Gq/XOdz/aAgR7rYetXdY4ID5+W4F5QQi/P//j2E+WyM/5RMR/g9k1xUo
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.1837147043793798, 0.3192091945811968}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -6521,6 +6533,7 @@ j+Q=
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->True,
     AxesOrigin->{0, 0.2},
+    ImageSize->{Medium},
     PlotRange->{{-1, 1}, {0.18592477560940937`, 0.31520630607750955`}},
     PlotRangeClipping->True,
     PlotRangePadding->{
@@ -6536,7 +6549,9 @@ j+Q=
    3.502499854625*^9, 3.502499862796875*^9}, {3.502500199203125*^9, 
    3.50250021228125*^9}, {3.502500291921875*^9, 3.502500331125*^9}, {
    3.502500379125*^9, 3.502500401234375*^9}, {3.50250046240625*^9, 
-   3.502500491828125*^9}, 3.502500835796875*^9, 3.502500956671875*^9}]
+   3.502500491828125*^9}, 3.502500835796875*^9, 3.502500956671875*^9, {
+   3.502541262234375*^9, 3.502541278578125*^9}, {3.502544693765625*^9, 
+   3.502544711375*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -7487,8 +7502,8 @@ AMkA7FQ=
    3.50250083640625*^9, 3.502500956984375*^9}]
 }, Open  ]]
 },
-WindowSize->{616, 452},
-WindowMargins->{{73, Automatic}, {Automatic, 0}},
+WindowSize->{1020, 479},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
 StyleDefinitions->"Default.nb"
 ]
@@ -7503,16 +7518,16 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[545, 20, 51407, 1320, 8044, "Input"],
+Cell[545, 20, 51407, 1320, 4939, "Input"],
 Cell[51955, 1342, 161, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[52141, 1348, 1608, 32, 112, "Input"],
-Cell[53752, 1382, 309423, 5156, 562, "Output"]
+Cell[52141, 1348, 1903, 37, 146, "Input"],
+Cell[54047, 1387, 309720, 5166, 1029, "Output"]
 }, Open  ]],
-Cell[363190, 6541, 50968, 829, 4132, "Input"],
+Cell[363782, 6556, 50968, 829, 2092, "Input"],
 Cell[CellGroupData[{
-Cell[414183, 7374, 135, 2, 31, "Input"],
-Cell[414321, 7378, 5998, 108, 229, "Output"]
+Cell[414775, 7389, 135, 2, 31, "Input"],
+Cell[414913, 7393, 5998, 108, 229, "Output"]
 }, Open  ]]
 }
 ]
