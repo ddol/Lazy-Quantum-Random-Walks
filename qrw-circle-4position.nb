@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     21640,        527]
-NotebookOptionsPosition[     20837,        500]
-NotebookOutlinePosition[     21399,        520]
-CellTagsIndexPosition[     21356,        517]
+NotebookDataLength[     21212,        512]
+NotebookOptionsPosition[     20591,        490]
+NotebookOutlinePosition[     21052,        508]
+CellTagsIndexPosition[     21009,        505]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -362,8 +362,7 @@ Cell[BoxData[{
   " "}]}], "Input",
  CellChangeTimes->{{3.502479897640625*^9, 3.50247991115625*^9}, {
   3.502479951828125*^9, 3.502479989921875*^9}, {3.50248003846875*^9, 
-  3.5024801285625*^9}},
- FormatType->"InputForm"],
+  3.5024801285625*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -431,8 +430,6 @@ Cell[BoxData[
    3.50250072790625*^9, 3.502500771984375*^9}, {3.502501129140625*^9, 
    3.502501134609375*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", "Continuious", "*)"}], "\[IndentingNewLine]", 
@@ -489,22 +486,13 @@ Cell[BoxData[
    3.502498432*^9}, 3.502498524890625*^9, {3.502498634859375*^9, 
    3.502498654984375*^9}, {3.50249874340625*^9, 3.502498745328125*^9}, {
    3.502498964*^9, 3.50249896625*^9}, {3.502501138796875*^9, 
-   3.502501155640625*^9}, {3.502541461953125*^9, 3.502541464796875*^9}}],
-
-Cell[BoxData[
- DynamicBox[ToBoxes[$CellContext`j, StandardForm],
-  Evaluator->"Local",
-  ImageSizeCache->{18., {0., 9.}}]], "PrintTemporary",
- CellChangeTimes->{3.502541467484375*^9}]
-}, Open  ]]
+   3.502501155640625*^9}, {3.502541461953125*^9, 3.502541464796875*^9}}]
 },
 WindowSize->{1016, 475},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingPageRange->{Automatic, Automatic},
 AutoStyleOptions -> {"UnmatchedBracketStyle" -> None},
-Magnification:>FEPrivate`If[
-  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
 FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
 StyleDefinitions->"Default.nb"
 ]
@@ -519,16 +507,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[545, 20, 3528, 88, 369, "Input"],
-Cell[4076, 110, 8186, 184, 989, "Input"],
-Cell[12265, 296, 1398, 27, 146, "Input"],
-Cell[13666, 325, 984, 22, 124, "Input"],
-Cell[14653, 349, 513, 16, 55, "Input"],
-Cell[15169, 367, 3033, 64, 278, "Input"],
-Cell[CellGroupData[{
-Cell[18227, 435, 2408, 56, 256, "Input"],
-Cell[20638, 493, 183, 4, 27, "PrintTemporary"]
-}, Open  ]]
+Cell[545, 20, 3528, 88, 309, "Input"],
+Cell[4076, 110, 8186, 184, 829, "Input"],
+Cell[12265, 296, 1398, 27, 121, "Input"],
+Cell[13666, 325, 984, 22, 103, "Input"],
+Cell[14653, 349, 487, 15, 52, "Input"],
+Cell[15143, 366, 3033, 64, 252, "Input"],
+Cell[18179, 432, 2408, 56, 232, "Input"]
 }
 ]
 *)
