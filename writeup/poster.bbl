@@ -1,26 +1,18 @@
 \begin{thebibliography}{1}
 
-\bibitem{Bullmore:1996}
-E.~Bullmore, M.~Brammer, S.~C.~R. Williams, S.~Rabe-Hesketh, N.~Janot,
-  A.~David, J.~Mellers, R.~Howard, and P.~Sham.
-\newblock Statistical methods of estimation and inference for functional {MR}
-  image analysis.
-\newblock {\em Magn. Reson. Med.}, 35:261--277, 1996.
+\bibitem{Ke:2003}
+Julia Kempe.
+\newblock {Quantum random walks - an introductory overview}.
+\newblock {\em Contemporary Physics}, 44(4):307--327, Mar 2003.
 
-\bibitem{priestley:1981}
-M.~B. Priestley.
-\newblock {\em Spectral Analysis and Time Series}.
-\newblock Academic Press, London, 1981.
+\bibitem{Ma:2007}
+Peter Marttala.
+\newblock {An extension of the Deutsch-Jozsa algorithm to arbitrary qudits}.
+\newblock Master's thesis, University of Saskatchewan, 2007.
 
-\bibitem{silverman:1985}
-B.~W. Silverman.
-\newblock Some aspects of the spline smoothing approach to non-parametric
-  regression curve fitting.
-\newblock {\em J. Roy. Statist. Soc. B}, 47:1--52, 1985.
-
-\bibitem{wahba:1980}
-G.~Wahba.
-\newblock Automatic smoothing of the log periodogram.
-\newblock {\em J. Amer. Statist. Assoc.}, 75:122--132, 1980.
+\bibitem{Mc:2010}
+Michael McGettrick.
+\newblock {One Dimensional Quantum Walks with Memory}.
+\newblock Apr 2010.
 
 \end{thebibliography}

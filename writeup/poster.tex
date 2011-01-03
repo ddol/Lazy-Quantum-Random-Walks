@@ -9,6 +9,9 @@
 \usepackage{array}
 \usepackage{tabularx,tabulary}
 
+\newcommand{\ket}[1]{\left| #1\right\rangle}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -28,12 +31,12 @@
 \paragraph{Introduction}
 Random walks are a statistical tool, used to study patterns in randomness. They can be applied over a finite space (typically a graph) or an infinite continuum.
 
-Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results can aid the design of randomized quantum algorithms, particularly efficiency concerns for those algorithms.
+Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results can aid the design of randomized quantum algorithms, particularly efficiency concerns for those algorithms\cite{Ke:2003}.
 
 Much of the work concerning discrete quantum walks deals with a two state bit's, known as qubits. At each time step in a qubit system the particle must move. Our work looks at three state systems, who's particles are known as qutrits. The particle is not forced to move at each time step, there is a possibility that it can remain in the same location. This possibility to remain in place gives rise to the name "lazy" quantum walks.
 
 \paragraph{Classical Walks}
-The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times the distance from the origin is recorded. This series of experiments is then run a number of times, and the distances from the origin is recorded each time. When a histogram of these results is plotted we see that the distribution of distances from the origin is Gaussian (Figure~\ref{clas_10k}).
+The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times the distance from the origin is recorded. This series of experiments is then run a number of times, and the distances from the origin is recorded each time. When a histogram of these results is plotted we see that the distribution of distances from the origin is approximately normal (Figure~\ref{clas_10k}). As the particle can only land on an odd numbered space after an odd number of steps and an even numbered space after an even number of steps, over a larger number of steps every second value will be zero.
 
 \begin{figure}
 \includegraphics[height=110mm]{classic-10k-of-100-itterations.pdf}
@@ -41,7 +44,7 @@ The most approachable application of a discrete classical random walk is a fair 
 \label{clas_10k}
 \end{figure}    
 
-This can be generalized to show the probability of the particle being at a certain position after a certain number of steps\cite{kempe}.
+This can be generalized to show the probability of the particle being at a certain position after a certain number of steps\cite{Ke:2003}.
 
 \begin{center}
 \small
@@ -69,9 +72,9 @@ This can be generalized to show the probability of the particle being at a certa
 \label{clas_ti}
 \end{figure}    
 
-However, on a closed graph the probabilities converge over time. On a 4 position circle, where the particle can move clockwise or counter-clockwise after each timestep, the probabilities converge to $\dfrac{1}{4}$ for each of the four positions.
+However, on a closed graph the probabilities converge over time. On a 4 position circle, where the particle can move clockwise or counter-clockwise after each timestep, the probabilities converge to $\frac{1}{4}$ for each of the four positions.
 
-We now consider a three state system on a graph. A particle can move left, right or remain stationary at each time step. Figure~\ref{clas2_ti} shows the probability distributions 
+We now consider a three state system on a graph. A particle can move left, right or remain stationary at each time step. Figure~\ref{clas2_ti} shows the generalized probability distributions of a lazy classical walk.
 
 \begin{center}
 \small
@@ -138,34 +141,100 @@ $\dfrac{ 5 }{ 243 }$ &
 \label{clas2_ti}
 \end{figure}    
 
-\begin{figure}
-\includegraphics[height=90mm,viewport=25 169 579
-    609]{jm_fig3.eps}
-\includegraphics[height=90mm,viewport=25 169 579
-    609]{jm_fig2.eps}
-  \caption{Trend Removal:(left) Obvious non-linear trend (right) In an area of activation}
-\label{trends}
-\end{figure}
-
 }
 %% Column 2
 \col{ 
-\paragraph{Theory}
-The asymptotic sampling properties of the periodogram are well-known \cite{priestley:1981}.
-For increasingly long series:
-\begin{itemize}
-\item [(I).] $I(\omega_j)/f(\omega_j) \sim \textrm{E}$ where E has a
-  standard exponential distribution.
-\item [(II).] $I(\omega_j)$ and $I(\omega_k)$ are independent for all
-  $k\ne j$.
-\end{itemize}
-where $f(\omega)$ is the spectral density of the underlying stationary stochastic process.
-This is a very general result, includes AR, MA and ARMA processes as special cases and is known to be accurate for series of moderate
-length, such as those encountered in fMRI experiments. If we assume that the underlying spectral
-density $f(\omega)$ is smooth then we can use a smoothed version of
-$I(\omega)$, which we denote $g(\omega)$, to estimate $f(\omega)$.
+The lazy classical walk has a normal distribution, the introduction of the lazy step removes the odd/even restriction. Like the standard classical walk, the lazy classical walk converges to equal values on a closed graph.
 
-\paragraph{Estimating the spectral density}
+It is possible to vary the lazy bias of a classical walk. A common bias is to choose a probability per iteration of $\frac{1}{2}$ for the lazy move, $\frac{1}{4}$ for the clockwise move, and $\frac{1}{4}$ for the counter-clockwise move. This bias can be modeled as two coin tosses, where one coin signals movement or its absence, the second signals the direction of movement (if the first coin signals movement).
+
+However, we have chosen to give each movement possibility a probability of $\frac{1}{3}$. This is for comparison with the quantum randomization function we will be examining.
+
+\paragraph{Hadamard Gate}
+
+The quantum randomizing function we are examining is known as a Hadamard Gate (also known as a Hadamard Coin). A coin used for a two state (qubit) system is $H_2$ 
+
+\begin{equation}
+H_2 = \dfrac{1}{\sqrt{2}} \begin{pmatrix}
+  1 & 1 \\
+  1 & -1 
+\end{pmatrix}
+\label{eq:1}
+\end{equation}
+
+It is unitary and has been shown\cite{Ke:2003} to be fair. 
+
+The Hadamard gate has been generalized by Marttala\cite{Ma:2007} to $H_m$, where $m$ is the number of states in the system. 
+
+\begin{equation}
+\sigma = e^\frac{i2\pi}{m}
+\label{eq:2}
+\end{equation}
+
+\begin{equation}
+H_m = \dfrac{1}{\sqrt{m}} \begin{pmatrix}
+  1 & 1 & 1 & \cdots & 1 & 1 \\
+  1 & \sigma^{(m-1)} & \sigma^{2(m-1)} & \cdots & \sigma^2 & \sigma \\
+  1 & \sigma^{(m-2)} & \sigma^{2(m-2)} & \cdots & \sigma^4 & \sigma^2 \\
+  1 & \sigma^{(m-3)} & \sigma^{2(m-3)} & \cdots & \sigma^6 & \sigma^3 \\
+  \vdots  & \vdots  & \vdots  & \ddots & \vdots  & \vdots  \\
+  1 & \sigma & \sigma^2 & \cdots & \sigma^{(m-2)} & \sigma^{(m-1)} \\
+\end{pmatrix}
+\label{eq:3}
+\end{equation}
+
+As we are interested in a lazy walk we want a three state gate $H_3$, where the three states represent a left movement, a right movement, and no movement.
+
+\begin{equation}
+H_3 = \dfrac{1}{\sqrt{3}} \begin{pmatrix}
+  1 & 1 & 1 \\
+  1 & e^{-\frac{2}{3}i\pi} & e^{\frac{2}{3}i\pi} \\
+  1 & e^{\frac{2}{3}i\pi} & e^{-\frac{2}{3}i\pi}
+\end{pmatrix}
+\label{eq:4}
+\end{equation}
+
+\begin{equation}
+H_3 = \dfrac{1}{\sqrt{3}} \begin{pmatrix}
+  1 & 1 & 1 \\
+  1 & -(-1)^{\frac{1}{3}} & (-1)^{\frac{2}{3}} \\
+  1 & (-1)^{\frac{2}{3}} & -(-1)^{\frac{1}{3}}
+\end{pmatrix}
+\label{eq:5}
+\end{equation}
+
+We are satisfied that $H_3$ is unitary as 
+
+\begin{equation}
+H_{3}H_{3}^{\dagger} = I_3
+\label{eq:6}
+\end{equation}
+
+\paragraph{Quantum Walks on a Graph}
+
+A Lazy One Dimensional Discrete Quantum Walks takes place 
+on the state space spanned by vectors
+\begin{equation}
+\ket{n,p}
+\label{eq:7}
+\end{equation}
+where $n\in Z$ (the integers)
+and $p\in \{0,1,2\}$ is a three-state variable. $n$ represents the position a particle on a walk and is the walks classical component. $p$ is the quantum component and is typically a two-state spin. One step of the walk is given by the transitions
+\begin{eqnarray}
+\ket{n,0} &\longrightarrow a\ket{n,0} + b\ket{n+1,1} + c\ket{n-1,2}\\
+\ket{n,1} &\longrightarrow d\ket{n,0} + e\ket{n+1,1} + f\ket{n-1,2}\\
+\ket{n,2} &\longrightarrow g\ket{n,0} + h\ket{n+1,1} + i\ket{n-1,2}
+\end{eqnarray} 
+where 
+\begin{equation}
+\begin{pmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i 
+\end{pmatrix} = H_3
+\end{equation}
+\cite{Ke:2003,Mc:2010}.
+
 We use a non-parametric estimate of the spectral density and thus avoid the assumptions implicit in parametric approaches. An estimate of the spectral density is obtained by smoothing the
 periodogram on log scale \cite{wahba:1980}, $\log(I(\omega))$, to
 ensure that the spectral density estimate is positive everywhere. A smoothing spline \cite{silverman:1985} was chosen to
@@ -196,6 +265,17 @@ By calculating the statistic $R_j$ at the fundamental frequency of
 activation, $\omega_c$, we obtain a test statistic, $R_c$, for
 significant activation. Large values of $R_c$ indicate a large effect at the fundamental
 frequency. All of the statistics $R_j$, apart from $j=0$ and $n/2$, will have the same distribution as $R_c$ and thus can be used as a benchmark against which to compare the theoretical distribution of $R_c$, at negligible computational cost. Thus the method is effectively self-calibrating.
+
+\begin{figure}
+\includegraphics[height=90mm,viewport=25 169 579
+    609]{jm_fig3.eps}
+\includegraphics[height=90mm,viewport=25 169 579
+    609]{jm_fig2.eps}
+  \caption{Trend Removal:(left) Obvious non-linear trend (right) In an area of activation}
+\label{trends}
+\end{figure}
+
+
 }
 %% Column 3
 \col{
