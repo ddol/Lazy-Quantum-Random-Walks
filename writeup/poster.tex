@@ -19,7 +19,7 @@
 \begin{document}
 
 \title{Fairness in Lazy Quantum Random Walks}
-\author{David F. Dolphin and Michael McGettrick}
+\author{David F. Dolphin and Michael McGettrick^{\dagger}}
 \address{Department of Information Technology, National University of Ireland, Galway}
 \email{\{d.dolphin1,micheal.mcgettrick\}@nuigalway.ie}
 
@@ -40,7 +40,7 @@ Much of the work concerning discrete quantum walks deals with a two state bit's,
 The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times the distance from the origin is recorded. This series of experiments is then run a number of times, and the distances from the origin is recorded each time. When a histogram of these results is plotted we see that the distribution of distances from the origin is approximately normal (Figure~\ref{clas_10k}). As the particle can only land on an odd numbered space after an odd number of steps and an even numbered space after an even number of steps, over a larger number of steps every second value will be zero.
 
 \begin{figure}
-\includegraphics[height=110mm]{classic-10k-of-100-itterations.pdf}
+\includegraphics[height=130mm]{classic-10k-of-100-itterations.pdf}
 \caption{Histogram of final positions, 10,000 iterations of 100-step classical walk.}
 \label{clas_10k}
 \end{figure}    
@@ -69,7 +69,7 @@ This can be generalized to show the probability of the particle being at a certa
 \end{center}
 
 \begin{figure}
-\caption{The probability of being at position i after T steps of the classical random walk on the line starting in 0.}
+\caption{The probability of being at position $i$ after $T$ steps of the classical random walk on the line starting in 0.}
 \label{clas_ti}
 \end{figure}    
 
@@ -138,7 +138,7 @@ $\dfrac{ 5 }{ 243 }$ &
 \end{center}
 
 \begin{figure}
-\caption{The probability of being at position i after T steps of the lazy classical random walk on the line starting in 0.}
+\caption{The probability of being at position $i$ after $T$ steps of the lazy classical random walk on the line starting in 0.}
 \label{clas2_ti}
 \end{figure}    
 
@@ -168,33 +168,7 @@ It is unitary and has been shown\cite{Ke:2003} to be fair.
 
 The Hadamard gate has been generalized by Marttala\cite{Ma:2007} to $H_m$, where $m$ is the number of states in the system. 
 
-\begin{equation}
-\sigma = e^\frac{i2\pi}{m}
-\label{eq:2}
-\end{equation}
-
-\begin{equation}
-H_m = \dfrac{1}{\sqrt{m}} \begin{pmatrix}
-  1 & 1 & 1 & \cdots & 1 & 1 \\
-  1 & \sigma^{(m-1)} & \sigma^{2(m-1)} & \cdots & \sigma^2 & \sigma \\
-  1 & \sigma^{(m-2)} & \sigma^{2(m-2)} & \cdots & \sigma^4 & \sigma^2 \\
-  1 & \sigma^{(m-3)} & \sigma^{2(m-3)} & \cdots & \sigma^6 & \sigma^3 \\
-  \vdots  & \vdots  & \vdots  & \ddots & \vdots  & \vdots  \\
-  1 & \sigma & \sigma^2 & \cdots & \sigma^{(m-2)} & \sigma^{(m-1)} \\
-\end{pmatrix}
-\label{eq:3}
-\end{equation}
-
 As we are interested in a lazy walk we want a three state gate $H_3$, where the three states represent a left movement, a right movement, and no movement.
-
-\begin{equation}
-H_3 = \dfrac{1}{\sqrt{3}} \begin{pmatrix}
-  1 & 1 & 1 \\
-  1 & e^{-\frac{2}{3}i\pi} & e^{\frac{2}{3}i\pi} \\
-  1 & e^{\frac{2}{3}i\pi} & e^{-\frac{2}{3}i\pi}
-\end{pmatrix}
-\label{eq:4}
-\end{equation}
 
 \begin{equation}
 H_3 = \dfrac{1}{\sqrt{3}} \begin{pmatrix}
@@ -239,6 +213,12 @@ where
 \end{equation}
 
 This has been expanded from the two-state walk equations given elsewhere\cite{Ke:2003,Mc:2010}.
+
+\begin{figure}
+\includegraphics[height=140mm]{std-1.pdf}
+\caption{State transition diagram of four position unbiased graph.}
+\label{std_10k}
+\end{figure}    
 
 Multiple randomizing iterations were performed for a four-position graph with no directional biasing.   Varying input conditions were used to obtain a variety of results. A four position non-lazy circular quantum walk was also analyzed for comparison to the lazy results.
 }
@@ -289,8 +269,6 @@ We define our input condition as
 \begin{equation}
 x\ket{0,0}+y\ket{0,1}+y\ket{0,2}
 \end{equation}
- 
-where
 
 \begin{equation}
 y=\sqrt{\frac{1-x^2}{2}}
@@ -300,30 +278,49 @@ y=\sqrt{\frac{1-x^2}{2}}
 \includegraphics[height=70mm]{xyy-100-steps-1-1.pdf}
 \includegraphics[height=70mm]{xyy-500-steps-1-1.pdf}
 \includegraphics[height=140mm]{xyy-2000-steps-1-1.pdf}
-  \caption{Final value of positional probability for each position after a number of iterations, with x varying from $-1$ to $1$. Values for position 1 and 3 are identical (solid line). Position 0's probability (dashed) is greater than 2's (dotted) for high numbers of iterations. Results are for 100(top left), 500(top right), and 2000(bottom) iterations.}
+  \caption{Final value of positional probability for each position after a number of iterations, with x varying from $-1$ to $1$. Values are for Position 0 (dashed), 1 \& 3 (solid), and 2 (dotted). Results are for 100(top left), 500(top right), and 2000(bottom) iterations.}
 \label{trends}
 \end{figure}
 
-When $x=1$ the problem starts in a fully lazy state. As $x$ decreases the starting state becomes more biased toward a equal combination or clockwise and counter-clockwise states.
-
 \begin{center}
 \small
-\begin{tabular}{|l||c|c|c|c|}
+\begin{tabular}{|c||c|c|c|c|}
 \hline 
-& x-value & Probability & x-value & Probability\\
+\multirow{2}{*}{ }& \multicolumn{2}{ |c| }{\hspace*{\fill} Minimum Probability \hspace*{\fill} }  &
+ \multicolumn{2}{ |c| }{\hspace*{\fill} Maximum Probability \hspace*{\fill} } \\
 \hline 
-& \multicolumn{2}{Minimum Probability} & \multicolumn{2}{Maximum Probability}\\
+& \hspace*{\fill} x-value \hspace*{\fill} 
+& \hspace*{\fill} Probability \hspace*{\fill} 
+& \hspace*{\fill} x-value \hspace*{\fill} 
+& \hspace*{\fill} Probability\hspace*{\fill} \\
 \hline \hline
-Position 0 & -0.464476 & 0.277144 & 0.885579 & 0.313895\\
+\hspace*{\fill} Position 0 \hspace*{\fill} 
+& \hspace*{\fill} -0.464476 \hspace*{\fill} 
+& \hspace*{\fill} 0.277144 \hspace*{\fill} 
+& \hspace*{\fill} 0.885579 \hspace*{\fill} 
+& \hspace*{\fill} 0.313895 \hspace*{\fill} \\
 \hline
-Position 1 & 0.887671 & 0.186246 & -0.460463 & 0.223129\\
+\hspace*{\fill} Position 1\& 3 \hspace*{\fill} & 0.887671 & 0.186246 & -0.460463 & 0.223129\\
 \hline 
 Position 2 & -0.45647 & 0.276597 & 0.889731 & 0.313614\\
 \hline 
 \end{tabular}
 \end{center}
+
+\begin{figure}
+\caption{The maximum and minimum positional probabilities for each position after 2000 iterations.}
+\label{quan_max}
+\end{figure}    
+
 \paragraph{Conclusion and extensions}
-Non-parametric spectral estimation is shown to be an accurate and self-calibrating approach for analyzing periodic designs. The method makes few assumptions and is resistant to high-frequency artefacts whereas parametric time-domain approaches may be susceptible to these artefacts and biased by the assumptions they make on the form of the spectral density. The method can be easily extended to handle non-periodic event related designs and initial results are extremely promising.
+
+The Hadamard gate is commonly considered to be fair and balanced. It produces some results equal to those obtained from a fair classical coin. However, there are a variety of differences.
+
+We have investigated input with real numbers, but intend on also looking at the results when complex inputs are used.
+
+We have only investigated a graph with four steps. The profile of $x$ vs. probability values may be unique to 4 step lazy quantum walks, odd numbered walks or may be common to all graphs. We intend on investigating graphs with many more positions.
+
+The vales for Position 0 and 2 look likely to converge. We intend to investigate if these positional profiles do converge. We also intend to find the maximum and minimum cumulative probabilities for each position.
 
 \references
 \bibliography{jm.ref}
@@ -334,8 +331,4 @@ Non-parametric spectral estimation is shown to be an accurate and self-calibrati
 \makefooter
 
 \end{document}
-
-
-
-
 
