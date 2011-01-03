@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  3 JAN 2011 07:39
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  3 JAN 2011 07:45
 entering extended mode
 **D:/code/msc/writeup/poster.tex
 (D:/code/msc/writeup/poster.tex
@@ -352,7 +352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 }
+l.326 }
        
 ? 
 <xyy-100-steps-1-1.pdf, id=4, 289.08pt x 182.30609pt>
@@ -374,12 +374,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 }
+l.326 }
        
 ? 
 (D:\code\msc\writeup\poster.bbl)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 332.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 331.
  [1
 
 
@@ -406,7 +406,7 @@ ts/cm/cmr17.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 d:/Docs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><d:/Docs/MiKTeX 2.9/fonts
 /type1/urw/times/utmb8a.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
 b><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 295927 bytes).
+Output written on poster.pdf (1 page, 295931 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
