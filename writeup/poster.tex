@@ -7,6 +7,7 @@
 \usepackage{epstopdf}
 \usepackage{amssymb,amsmath}
 \usepackage{array}
+\usepackage{multirow}
 \usepackage{tabularx,tabulary}
 
 \newcommand{\ket}[1]{\left| #1\right\rangle}
@@ -144,6 +145,7 @@ $\dfrac{ 5 }{ 243 }$ &
 }
 %% Column 2
 \col{ 
+\paragraph{}
 The lazy classical walk has a normal distribution, the introduction of the lazy step removes the odd/even restriction. Like the standard classical walk, the lazy classical walk converges to equal values on a closed graph.
 
 It is possible to vary the lazy bias of a classical walk. A common bias is to choose a probability per iteration of $\frac{1}{2}$ for the lazy move, $\frac{1}{4}$ for the clockwise move, and $\frac{1}{4}$ for the counter-clockwise move. This bias can be modeled as two coin tosses, where one coin signals movement or its absence, the second signals the direction of movement (if the first coin signals movement).
@@ -218,8 +220,10 @@ on the state space spanned by vectors
 \ket{n,p}
 \label{eq:7}
 \end{equation}
-where $n\in Z$ (the integers)
-and $p\in \{0,1,2\}$ is a three-state variable. $n$ represents the position a particle on a walk and is the walks classical component. $p$ is the quantum component and is typically a two-state spin. One step of the walk is given by the transitions
+where $n\in Z$
+and $p\in \{0,1,2\}$ is a three-state variable. $n$ represents the position of a particle on the walk and is the walks classical component. $p$ is the quantum component, it is typically a two-state spin but we have added a third state to represent our lazy state. 
+
+One step of the walk is given by the transitions
 \begin{eqnarray}
 \ket{n,0} &\longrightarrow a\ket{n,0} + b\ket{n+1,1} + c\ket{n-1,2}\\
 \ket{n,1} &\longrightarrow d\ket{n,0} + e\ket{n+1,1} + f\ket{n-1,2}\\
@@ -233,75 +237,93 @@ where
   g & h & i 
 \end{pmatrix} = H_3
 \end{equation}
-\cite{Ke:2003,Mc:2010}.
 
-We use a non-parametric estimate of the spectral density and thus avoid the assumptions implicit in parametric approaches. An estimate of the spectral density is obtained by smoothing the
-periodogram on log scale \cite{wahba:1980}, $\log(I(\omega))$, to
-ensure that the spectral density estimate is positive everywhere. A smoothing spline \cite{silverman:1985} was chosen to
-smooth the log-periodogram. The spline is given more freedom at low frequencies to accommodate the effect of the detrending.
-To ensure the spectral density of the noise is estimated independently
-of any response to the stimulus, the periodogram ordinates at the
-fundamental frequency of stimulation and its first two harmonics are
-not included in this procedure. Also, a small amount of spatial smoothing is applied to the spectral density estimates. Figure~\ref{periodogram} shows the spectral density estimates before (thick line) and after (dotted line) spatial smoothing.  
+This has been expanded from the two-state walk equations given elsewhere\cite{Ke:2003,Mc:2010}.
 
-
-\paragraph{Testing for a response to the stimulus}
-
-The spectral density estimate provides us with a baseline against
-which to test for significant departures from the underlying process.
-From (I),
-\begin{equation}
-  \frac{I(\omega_j)}{f(\omega_j)} \sim E
-\label{eq:13}
-\end{equation}
-Substituting $g(\omega_j)$ for $f(\omega_j)$, we define the ratio
-statistic, $R_j$, as
-\begin{equation}
-  R_j = \frac{I(\omega_j)}{g(\omega_j)},\qquad\qquad \omega_j=j/\delta
-  n
-\label{eq:14}
-\end{equation}
-By calculating the statistic $R_j$ at the fundamental frequency of
-activation, $\omega_c$, we obtain a test statistic, $R_c$, for
-significant activation. Large values of $R_c$ indicate a large effect at the fundamental
-frequency. All of the statistics $R_j$, apart from $j=0$ and $n/2$, will have the same distribution as $R_c$ and thus can be used as a benchmark against which to compare the theoretical distribution of $R_c$, at negligible computational cost. Thus the method is effectively self-calibrating.
-
-\begin{figure}
-\includegraphics[height=90mm,viewport=25 169 579
-    609]{jm_fig3.eps}
-\includegraphics[height=90mm,viewport=25 169 579
-    609]{jm_fig2.eps}
-  \caption{Trend Removal:(left) Obvious non-linear trend (right) In an area of activation}
-\label{trends}
-\end{figure}
-
-
+Multiple randomizing iterations were performed for a four-position graph with no directional biasing.   Varying input conditions were used to obtain a variety of results. A four position non-lazy circular quantum walk was also analyzed for comparison to the lazy results.
 }
 %% Column 3
 \col{
 \paragraph{Results}
-We have compared our method to an implementation of the AR(1) approach of \cite{Bullmore:1996} in which we apply our own non-linear detrending. Figure~\ref{vis} shows thresholded $p$-value maps of the same slice from a periodic visual stimulation dataset. The AR(1) approach shows significantly more false-positive activation in areas away from the visual cortex. We also applied the two approaches to a null dataset, assuming a periodic stimulus. The distribution of each statistic was compared to its theoretical form using $PP$-plots shown if figure~\ref{pp.plots}. The left plot shows the $PP$-plot of the $R_c$ statistic (thick line) and the $PP$-plot for $R_j$ statistics at a range of higher frequencies (dotted line). The agreement of the dotted line with the theoretical (straight line at $45^o$) validates the use of the theoretical distribution when using our method. For the AR(1) approach shown in the right plot the theoretical is not an adequate fit and a randomisation experiment will be needed to correct for this. 
-\paragraph{High frequency artefacts}
-In some datasets we have found high frequency artefacts that occur in narrow bands and have been attributed to Nyquist ghosting(figure~\ref{ghost} (right)). We have detected these artefacts using our values of $R_j$ at high frequencies (figure~\ref{ghost} (left) shows a thresholded $R_{88}$ image).
-We have found that parametric-time domain models may be extremely susceptible to these artefacts whereas non-parametric spectral density estimation will be resistant. Three methods were applied to a voxel in an area exhibiting the high-frequency artefact. Method I: The AR(1) approach described above, Method II: As Method I but with high frequency artefact removed, Method III: Our approach. Comparing Method I and II, in the table below, we see that the estimated parameters are significantly different after the artefact has been removed, which results in a misleading statistic. Even after removal, there is no guarantee that the AR(1) model is flexible enough and this results in the difference between Methods II and III.
+The non-lazy graph converges to $\frac{1}{4}$ for each step. This is due to the fact that the positional probabilities repeat after 8 steps, caused by constructive and destructive interference on the graph.
+
 \begin{center}
 \small
-\begin{tabular}{|l||c|c|c|c|c|}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|}
 \hline 
-& AR(1) coefficient & $\widehat{\sigma^2}$ & Numerator & Denominator & Ratio Statistic\\
+& $\ket{0,0}$ & $\ket{0,1}$ & $\ket{1,0}$ & $\ket{1,1}$ & $\ket{2,0}$ & $\ket{2,1}$ & $\ket{3,0}$ & $\ket{3,1}$ \\
 \hline \hline
-Method I & $-$0.0027 & 15765 & 591.88 & 315.29 & 1.877\\
-\hline
-Method II & 0.2839 & 11276 & 624.98 & 419.46 & 1.490\\
+\hspace*{\fill} 0 \hspace*{\fill} & 1  &  &  &  &  &  & & \\
 \hline 
-Method III& --- & --- & 689.30 & 513.88 & 1.341\\
+1 &  &  &  &  
+$\dfrac{ 1 }{ \sqrt{2} }$ & & &
+$\dfrac{ 1 }{ \sqrt{2} }$  & 
+\hspace*{\fill} \\
+\hline 
+2 &  
+$\dfrac{ 1 }{ 2 }$ & 
+$\dfrac{ 1 }{ 2 }$ & & &
+$\dfrac{ 1 }{ 2 }$ & 
+$-\dfrac{ 1 }{ 2 }$ & & &
+\hspace*{\fill} \\
+\hline 
+3 & & & & & & & 
+$\dfrac{ 1 }{ \sqrt{2} }$ & 
+$\dfrac{ 1 }{ \sqrt{2} }$
+\hspace*{\fill} \\
+\hline
+\hspace*{\fill} 4 \hspace*{\fill} &  &  &  &  & 1 &  & & \\
+\hline 
+\end{tabular}
+\end{center}
+
+\begin{figure}
+\caption{The probability of being at position $i$ after $T$ steps of the quantum random walk on a closed four step graph, starting at $\ket{0,0}$.}
+\label{quan_ti}
+\end{figure}    
+
+As a result, the positional probabilities converge to equal values for all positions on a four step classical walk (lazy or not), and a non-lazy quantum walk. However, the positional probabilities do not converge to equal values for the lazy quantum walk on a four position circle.
+
+We define our input condition as 
+
+\begin{equation}
+x\ket{0,0}+y\ket{0,1}+y\ket{0,2}
+\end{equation}
+ 
+where
+
+\begin{equation}
+y=\sqrt{\frac{1-x^2}{2}}
+\end{equation}
+
+\begin{figure}
+\includegraphics[height=70mm]{xyy-100-steps-1-1.pdf}
+\includegraphics[height=70mm]{xyy-500-steps-1-1.pdf}
+\includegraphics[height=140mm]{xyy-2000-steps-1-1.pdf}
+  \caption{Final value of positional probability for each position after a number of iterations, with x varying from $-1$ to $1$. Values for position 1 and 3 are identical (solid line). Position 0's probability (dashed) is greater than 2's (dotted) for high numbers of iterations. Results are for 100(top left), 500(top right), and 2000(bottom) iterations.}
+\label{trends}
+\end{figure}
+
+When $x=1$ the problem starts in a fully lazy state. As $x$ decreases the starting state becomes more biased toward a equal combination or clockwise and counter-clockwise states.
+
+\begin{center}
+\small
+\begin{tabular}{|l||c|c|c|c|}
+\hline 
+& x-value & Probability & x-value & Probability\\
+\hline 
+& \multicolumn{2}{Minimum Probability} & \multicolumn{2}{Maximum Probability}\\
+\hline \hline
+Position 0 & -0.464476 & 0.277144 & 0.885579 & 0.313895\\
+\hline
+Position 1 & 0.887671 & 0.186246 & -0.460463 & 0.223129\\
+\hline 
+Position 2 & -0.45647 & 0.276597 & 0.889731 & 0.313614\\
 \hline 
 \end{tabular}
 \end{center}
 \paragraph{Conclusion and extensions}
 Non-parametric spectral estimation is shown to be an accurate and self-calibrating approach for analyzing periodic designs. The method makes few assumptions and is resistant to high-frequency artefacts whereas parametric time-domain approaches may be susceptible to these artefacts and biased by the assumptions they make on the form of the spectral density. The method can be easily extended to handle non-periodic event related designs and initial results are extremely promising.
-\paragraph{Acknowledgements} We are grateful to Dr Stephen Smith (fMRIB Centre, Oxford) for
-advice and datasets.
 
 \references
 \bibliography{jm.ref}
