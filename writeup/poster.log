@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  3 JAN 2011 07:45
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  3 JAN 2011 13:21
 entering extended mode
 **D:/code/msc/writeup/poster.tex
 (D:/code/msc/writeup/poster.tex
@@ -397,7 +397,7 @@ Here is how much of TeX's memory you used:
  5972 multiletter control sequences out of 15000+200000
  30816 words of font info for 79 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,13n,24p,763b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,24p,764b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/Docs/MiKTeX 2.9/fonts/enc/dvips/fontname/
 8r.enc}<d:/Docs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Docs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Docs/MiKTeX 2.9/fonts/t
@@ -406,7 +406,7 @@ ts/cm/cmr17.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 d:/Docs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><d:/Docs/MiKTeX 2.9/fonts
 /type1/urw/times/utmb8a.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
 b><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 295931 bytes).
+Output written on poster.pdf (1 page, 296325 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

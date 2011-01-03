@@ -32,12 +32,12 @@
 \paragraph{Introduction}
 Random walks are a statistical tool, used to study patterns in randomness. They can be applied over a finite space (typically a graph) or an infinite continuum.
 
-Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results can aid the design of randomized quantum algorithms, particularly efficiency concerns for those algorithms\cite{Ke:2003}.
+Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results can aid the design of randomized quantum algorithms, particularly regarding efficiency concerns for those algorithms\cite{Ke:2003}.
 
-Much of the work concerning discrete quantum walks deals with a two state bit's, known as qubits. At each time step in a qubit system the particle must move. Our work looks at three state systems, who's particles are known as qutrits. The particle is not forced to move at each time step, there is a possibility that it can remain in the same location. This possibility to remain in place gives rise to the name "lazy" quantum walks.
+Much of the work concerning discrete quantum walks deals with two-state bit's, known as qubits. At each time step in a qubit system the particle must move. Our work looks at three state systems, who's particles are known as qutrits. The particle is not forced to move at each time step; there is a possibility that it can remain in the same location. This possibility to remain in place gives rise to the name ``lazy''quantum walks.
 
 \paragraph{Classical Walks}
-The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times the distance from the origin is recorded. This series of experiments is then run a number of times, and the distances from the origin is recorded each time. When a histogram of these results is plotted we see that the distribution of distances from the origin is approximately normal (Figure~\ref{clas_10k}). As the particle can only land on an odd numbered space after an odd number of steps and an even numbered space after an even number of steps, over a larger number of steps every second value will be zero.
+The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times, the distance from the origin is recorded. This series of experiments is then run a number of times, and the distance from the origin is recorded each time. When a histogram of these results is plotted, we see that the distribution of distances from the origin is approximately normal (Figure~\ref{clas_10k}). As the particle can only land on an odd numbered space after an odd number of steps and an even numbered space after an even number of steps, over a larger number of steps every second value will be zero.
 
 \begin{figure}
 \includegraphics[height=130mm]{classic-10k-of-100-itterations.pdf}
@@ -146,7 +146,7 @@ $\dfrac{ 5 }{ 243 }$ &
 %% Column 2
 \col{ 
 \paragraph{}
-The lazy classical walk has a normal distribution, the introduction of the lazy step removes the odd/even restriction. Like the standard classical walk, the lazy classical walk converges to equal values on a closed graph.
+The lazy classical walk has a normal distribution; the introduction of the lazy step removes the odd/even restriction. Like the standard classical walk, the lazy classical walk converges to equal values on a closed graph.
 
 It is possible to vary the lazy bias of a classical walk. A common bias is to choose a probability per iteration of $\frac{1}{2}$ for the lazy move, $\frac{1}{4}$ for the clockwise move, and $\frac{1}{4}$ for the counter-clockwise move. This bias can be modeled as two coin tosses, where one coin signals movement or its absence, the second signals the direction of movement (if the first coin signals movement).
 
@@ -194,7 +194,7 @@ A Lazy One Dimensional Discrete Quantum Walk takes place on the state space span
 \label{eq:7}
 \end{equation}
 where $n\in Z$
-and $p\in \{0,1,2\}$ is a three-state variable. $n$ represents the position of a particle on the walk and is the walks classical component. $p$ is the quantum component, it is typically a two-state spin but we have added a third state to represent our lazy state. 
+and $p\in \{0,1,2\}$ is a three-state variable. $n$ represents the position of a particle on the walk and is the walk's classical component. $p$ is the quantum component; it is typically a two-state spin, but we have added a third state to represent our lazy state. 
 
 One step of the walk is given by the transitions
 \begin{eqnarray}
