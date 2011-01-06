@@ -19,7 +19,7 @@
 \begin{document}
 
 \title{Fairness in Lazy Quantum Random Walks}
-\author{David F. Dolphin and Michael McGettrick$^{\dagger}$}
+\author{David F. Dolphin$^{\dagger}$ and Michael McGettrick$^*$}
 \address{Department of Information Technology, National University of Ireland, Galway}
 \email{\{d.dolphin1,micheal.mcgettrick\}@nuigalway.ie}
 
@@ -32,20 +32,22 @@
 \paragraph{Introduction}
 Random walks are a statistical tool, used to study patterns in randomness. They can be applied over a finite space (typically a graph) or an infinite continuum.
 
-Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results can aid the design of randomized quantum algorithms, particularly regarding efficiency concerns for those algorithms\cite{Ke:2003}.
+Quantum (random) walks are the quantum equivalent of classical random walks. They are studied to observe the statistical properties of quantum systems. These results aid in the general design of randomised quantum algorithms, particularly regarding efficiency concerns for those algorithms\cite{Ke:2003}.
 
-Much of the work concerning discrete quantum walks deals with two-state bit's, known as qubits. At each time step in a qubit system the particle must move. Our work looks at three state systems, who's particles are known as qutrits. The particle is not forced to move at each time step; there is a possibility that it can remain in the same location. This possibility to remain in place gives rise to the name ``lazy''quantum walks.
+Much of the work concerning discrete quantum walks deals with two-state bits, known as qubits. At each time step in a qubit system the particle must move. Our work looks at three-state systems, whose particles are known as qutrits. In a qutrit system the particle is not forced to move at each time step; there is a possibility that it can remain in the same location. This possibility to remain in place gives rise to the name ``lazy'' quantum walks.
+
+This poster describes work in progress on this topic.
 
 \paragraph{Classical Walks}
 The most approachable application of a discrete classical random walk is a fair coin toss, the result of which moves a particle left or right on an infinite line. After this experiment has been run a number of times, the distance from the origin is recorded. This series of experiments is then run a number of times, and the distance from the origin is recorded each time. When a histogram of these results is plotted, we see that the distribution of distances from the origin is approximately normal (Figure~\ref{clas_10k}). As the particle can only land on an odd numbered space after an odd number of steps and an even numbered space after an even number of steps, over a larger number of steps every second value will be zero.
 
 \begin{figure}
-\includegraphics[height=130mm]{classic-10k-of-100-itterations.pdf}
+\includegraphics[height=100mm]{classic-10k-of-100-itterations.pdf}
 \caption{Histogram of final positions, 10,000 iterations of 100-step classical walk.}
 \label{clas_10k}
 \end{figure}    
 
-This can be generalized to show the probability of the particle being at a certain position after a certain number of steps\cite{Ke:2003}.
+This can be generalised to show the probability of the particle being at a certain position after a certain number of steps\cite{Ke:2003}.
 
 \begin{center}
 \small
@@ -69,13 +71,13 @@ This can be generalized to show the probability of the particle being at a certa
 \end{center}
 
 \begin{figure}
-\caption{The probability of being at position $i$ after $T$ steps of the classical random walk on the line starting in 0.}
+\caption{The probability of being at node $i$ after $T$ steps of the classical random walk on the line starting in 0.}
 \label{clas_ti}
 \end{figure}    
 
-However, on a closed graph the probabilities converge over time. On a 4 position circle, where the particle can move clockwise or counter-clockwise after each timestep, the probabilities converge to $\frac{1}{4}$ for each of the four positions.
+However, on a closed graph the probabilities converge over time. On a cyclic graph with 4 nodes, where we can move clockwise or counter-clockwise after each time-step, the probabilities converge to $\frac{1}{4}$ for each of the four nodes.
 
-We now consider a three state system on a graph. A particle can move left, right or remain stationary at each time step. Figure~\ref{clas2_ti} shows the generalized probability distributions of a lazy classical walk.
+We now consider a three state system on the integers. A particle can move left, right or remain stationary at each time step. Figure~\ref{clas2_ti} shows the generalised probability distributions of a lazy classical walk.
 
 \begin{center}
 \small
@@ -148,13 +150,13 @@ $\dfrac{ 5 }{ 243 }$ &
 \paragraph{}
 The lazy classical walk has a normal distribution; the introduction of the lazy step removes the odd/even restriction. Like the standard classical walk, the lazy classical walk converges to equal values on a closed graph.
 
-It is possible to vary the lazy bias of a classical walk. A common bias is to choose a probability per iteration of $\frac{1}{2}$ for the lazy move, $\frac{1}{4}$ for the clockwise move, and $\frac{1}{4}$ for the counter-clockwise move. This bias can be modeled as two coin tosses, where one coin signals movement or its absence, the second signals the direction of movement (if the first coin signals movement).
+It is possible to vary the lazy bias of a classical walk. A common bias is to choose a probability per iteration of $\frac{1}{2}$ for the lazy move, $\frac{1}{4}$ for the clockwise move, and $\frac{1}{4}$ for the counter-clockwise move. This bias can be modelled as two coin tosses, where one coin signals movement or its absence, the second signals the direction of movement (if the first coin signals movement).
 
 However, we have chosen to give each movement possibility a probability of $\frac{1}{3}$. This is for comparison with the quantum randomization function we will be examining.
 
 \paragraph{Hadamard Gate}
 
-The quantum randomizing function we are examining is known as a Hadamard Gate (also known as a Hadamard Coin). A coin used for a two state (qubit) system is $H_2$ 
+The quantum randomizing function we are examining is known as a Hadamard Gate (also known as a Hadamard Coin). A coin used for a two-state (qubit) system is $H_2$ 
 
 \begin{equation}
 H_2 = \dfrac{1}{\sqrt{2}} \begin{pmatrix}
@@ -166,9 +168,9 @@ H_2 = \dfrac{1}{\sqrt{2}} \begin{pmatrix}
 
 It is unitary and has been shown\cite{Ke:2003} to be fair. 
 
-The Hadamard gate has been generalized by Marttala\cite{Ma:2007} to $H_m$, where $m$ is the number of states in the system. 
+The Hadamard gate has been generalised by Marttala\cite{Ma:2007} to $H_m$, where $m$ is the number of states in the system. 
 
-As we are interested in a lazy walk we want a three state gate $H_3$, where the three states represent a left movement, a right movement, and no movement.
+As we are interested in a lazy walk we want a three-state gate $H_3$, where the three states represent a left movement, a right movement, and no movement.
 
 \begin{equation}
 H_3 = \dfrac{1}{\sqrt{3}} \begin{pmatrix}
@@ -188,7 +190,7 @@ H_{3}H_{3}^{\dagger} = I_3
 
 \paragraph{Quantum Walks on a Graph}
 
-A Lazy One Dimensional Discrete Quantum Walk takes place on the state space spanned by vectors
+A Lazy One-Dimensional Discrete Quantum Walk takes place on the state space spanned by vectors
 \begin{equation}
 \ket{n,p}
 \label{eq:7}
@@ -215,16 +217,16 @@ This has been expanded from the two-state walk equations given elsewhere\cite{Ke
 
 \begin{figure}
 \includegraphics[height=140mm]{std-1.pdf}
-\caption{State transition diagram of four position unbiased graph.}
+\caption{State transition diagram for cycle of length four.}
 \label{std_10k}
 \end{figure}    
 
-Multiple randomizing iterations were performed for a four-position graph with no directional biasing.   Varying input conditions were used to obtain a variety of results. A four position non-lazy circular quantum walk was also analyzed for comparison to the lazy results.
+Multiple randomising iterations were performed for a cyclic graph with four nodes and no directional biasing. Different initial states were used to obtain a variety of results. A non-lazy walk on a cycle with four nodes was also analysed for comparison to the lazy results.
 }
 %% Column 3
 \col{
 \paragraph{Results}
-The non-lazy graph converges to $\frac{1}{4}$ for each step. This is due to the fact that the positional probabilities repeat after 8 steps, caused by constructive and destructive interference on the graph.
+The non-lazy cycle converges to $\frac{1}{4}$ for each vertex. This is due to the fact that the nodal probabilities repeat after 8 steps, caused by constructive and destructive interference on the graph.
 
 \begin{center}
 \small
@@ -257,13 +259,13 @@ $\dfrac{ 1 }{ \sqrt{2} }$
 \end{center}
 
 \begin{figure}
-\caption{The probability of being at position $i$ after $T$ steps of the quantum random walk on a closed four step graph, starting at $\ket{0,0}$.}
+\caption{The probability of being at position $i$ after $T$ steps of the quantum random walk on a cycle with four nodes, starting at $\ket{0,0}$.}
 \label{quan_ti}
 \end{figure}    
 
-As a result, the positional probabilities converge to equal values for all positions on a four step classical walk (lazy or not), and a non-lazy quantum walk. However, the positional probabilities do not converge to equal values for the lazy quantum walk on a four position circle.
+As a result, the nodal probabilities converge to equal values for all nodes on a four node cycle for a classical walk, lazy and non-lazy, and a non-lazy quantum walk. However, the nodal probabilities do not converge to equal values for the lazy quantum walk on a cyclic graph with four nodes.
 
-We define our input condition as 
+We define our initial state as 
 
 \begin{equation}
 x\ket{0,0}+y\ket{0,1}+y\ket{0,2}
@@ -274,10 +276,10 @@ y=\sqrt{\frac{1-x^2}{2}}
 \end{equation}
 
 \begin{figure}
-\includegraphics[height=70mm]{xyy-100-steps-1-1.pdf}
-\includegraphics[height=70mm]{xyy-500-steps-1-1.pdf}
+\includegraphics[height=45mm]{xyy-100-steps-1-1.pdf}
+\includegraphics[height=45mm]{xyy-500-steps-1-1.pdf}
 \includegraphics[height=140mm]{xyy-2000-steps-1-1.pdf}
-  \caption{Final value of positional probability for each position after a number of iterations, with x varying from $-1$ to $1$. Values are for Position 0 (dashed), 1 \& 3 (solid), and 2 (dotted). Results are for 100(top left), 500(top right), and 2000(bottom) iterations.}
+  \caption{Final value of nodal probability for each node in a 4 node cycle after a number of iterations of the lazy quantum walk, with x varying from $-1$ to $1$. Values are for Node 0 (dashed), 1 \& 3 (solid), and 2 (dotted). Results are for 100(top left), 500(top right), and 2000(bottom) iterations.}
 \label{trends}
 \end{figure}
 
@@ -293,15 +295,18 @@ y=\sqrt{\frac{1-x^2}{2}}
 & \hspace*{\fill} x-value \hspace*{\fill} 
 & \hspace*{\fill} Probability\hspace*{\fill} \\
 \hline \hline
-\hspace*{\fill} Position 0 \hspace*{\fill} 
+\hspace*{\fill} Node 0 \hspace*{\fill} 
 & \hspace*{\fill} -0.464476 \hspace*{\fill} 
 & \hspace*{\fill} 0.277144 \hspace*{\fill} 
 & \hspace*{\fill} 0.885579 \hspace*{\fill} 
 & \hspace*{\fill} 0.313895 \hspace*{\fill} \\
 \hline
-\hspace*{\fill} Position 1\& 3 \hspace*{\fill} & 0.887671 & 0.186246 & -0.460463 & 0.223129\\
+\hspace*{\fill} Node's 1\& 3 \hspace*{\fill} &
+0.887671 & 0.186246 &
+\hspace*{\fill} -0.460463 \hspace*{\fill}& 
+0.223129\\
 \hline 
-Position 2 & -0.45647 & 0.276597 & 0.889731 & 0.313614\\
+Node 2 & -0.45647 & 0.276597 & 0.889731 & 0.313614\\
 \hline 
 \end{tabular}
 \end{center}
@@ -315,11 +320,11 @@ Position 2 & -0.45647 & 0.276597 & 0.889731 & 0.313614\\
 
 The Hadamard gate is commonly considered to be fair and balanced. It produces some results equal to those obtained from a fair classical coin, and some different.
 
-We have investigated input with real numbers, but intend on also looking at the results when complex inputs are used.
+We have investigated initial states with real coefficients, but intend on also looking at the results when complex coefficients are used.
 
-We have only investigated a graph with four steps. The profile of $x$ vs. probability values may be unique to 4-step lazy quantum walks, odd numbered walks or may be common to all graphs. We intend on investigating graphs with many more positions.
+We have only investigated a cycle with four nodes. The profile of $x$ vs. probability values may be unique to a lazy quantum walks on a cycle with four nodes, an odd number of nodes or may be common to all graphs. We intend on investigating cycles with more vertices.
 
-The values for Position 0 and 2 look likely to converge. We intend to investigate if these positional profiles do converge. We also intend to find the maximum and minimum cumulative probabilities for each position.
+The values for Position 0 and 2 look likely to converge. We intend to investigate if these positional profiles do converge. We also intend to find the maximum and minimum cumulative probabilities for each vertex.
 
 \references
 \bibliography{jm.ref}

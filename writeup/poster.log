@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  3 JAN 2011 13:21
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.2)  5 JAN 2011 17:53
 entering extended mode
 **D:/code/msc/writeup/poster.tex
 (D:/code/msc/writeup/poster.tex
@@ -314,13 +314,13 @@ Overfull \hbox (473.48428pt too wide) in paragraph at lines 26--27
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
 <classic-10k-of-100-itterations.pdf, id=2, 240.9pt x 156.6412pt>
 File: classic-10k-of-100-itterations.pdf Graphic file (type pdf)
 
 <use classic-10k-of-100-itterations.pdf>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <29.86> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -329,7 +329,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 }
+l.147 }
        
 ? 
 
@@ -339,7 +339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 }
+l.147 }
        
 ? 
 <std-1.pdf, id=3, 190.7125pt x 155.58125pt>
@@ -352,7 +352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.326 }
+l.331 }
        
 ? 
 <xyy-100-steps-1-1.pdf, id=4, 289.08pt x 182.30609pt>
@@ -374,12 +374,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.326 }
+l.331 }
        
 ? 
 (D:\code\msc\writeup\poster.bbl)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 331.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 336.
  [1
 
 
@@ -393,7 +393,7 @@ iteup/xyy-500-steps-1-1.pdf> <D:/code/msc/writeup/xyy-2000-steps-1-1.pdf>]
 Here is how much of TeX's memory you used:
  2758 strings out of 494019
  37847 string characters out of 3150366
- 131301 words of memory out of 3000000
+ 132396 words of memory out of 3000000
  5972 multiletter control sequences out of 15000+200000
  30816 words of font info for 79 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -406,7 +406,7 @@ ts/cm/cmr17.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 d:/Docs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><d:/Docs/MiKTeX 2.9/fonts
 /type1/urw/times/utmb8a.pfb><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
 b><d:/Docs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on poster.pdf (1 page, 296325 bytes).
+Output written on poster.pdf (1 page, 298515 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
