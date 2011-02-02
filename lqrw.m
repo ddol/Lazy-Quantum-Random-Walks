@@ -44,7 +44,8 @@ StatesToPositionalProbabilites[State0_] := Module[{State=State0},
    Return[Simplify[Total[State*Conjugate[State],{2}]]]];
 
 CumulativeMean[List0_] := Module[{List = List0}, 
-   Return[Accumulate[List]/Range[Length[List]]]];
+   Return[Accumulate[List]/Range[Length[List]]
+]];
 
 MultipleLazyStepsRecursive[State0_,Coin0_,Steps0_] := Module[
 {State = State0, Coin = Coin0, Steps = Steps0},
@@ -74,6 +75,8 @@ MultipleLazyStepsHistory[State0_,Coin0_,Steps0_] := Module[
     inState = outState;];
   Return[returnHistory];
 ]
+
+
 
 End[];
 EndPackage[];
