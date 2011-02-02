@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{Ke:2003}
+Julia Kempe.
+\newblock {Quantum random walks - an introductory overview}.
+\newblock {\em Contemporary Physics}, 44(4):307--327, Mar 2003.
+
+\bibitem{Ma:2007}
+Peter Marttala.
+\newblock {An extension of the Deutsch-Jozsa algorithm to arbitrary qudits}.
+\newblock Master's thesis, University of Saskatchewan, 2007.
+
+\bibitem{Mc:2010}
+Michael McGettrick.
+\newblock {One-Dimensional Quantum Walks with Memory}.
+\newblock {\em Quantum Information \& Computation}, 10(6):509--524, May 2010.
+
+\end{thebibliography}
