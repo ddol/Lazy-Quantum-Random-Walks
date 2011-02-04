@@ -11,8 +11,11 @@ state after it has been randomised by one itteration of a given three state coin
 CumulativeMean::usage = "CumulativeMean[List] returns a list where each \
 value is the cumilative mean of all previous list values."; 
 
-StatesToPositionalProbabilites::useage = "StatesToPositionalProbabilites[State]\
-returns the position probabilites from a matrix of states.";
+QuantumStatesToPositionalProbabilites::useage = "QuantumStatesToPositionalProbabilites[State]\
+returns the position probabilites from a matrix of quantum states.";
+
+ClassicStatesToPositionalProbabilites::useage = "ClassicStatesToPositionalProbabilites[State]\
+returns the position probabilites from a matrix of classic states.";
 
 MultipleLazySteps::useage = "MultipleLazySteps[State, Coin, Steps] returns the state\
 after a number of itterations using the Coin has been performed."
@@ -40,8 +43,11 @@ SingleLazyItteration[State0_,Coin0_] := Module[{State = State0, Coin = Coin0},
    Return[oState];
 ]
 
-StatesToPositionalProbabilites[State0_] := Module[{State=State0},
+QuantumStatesToPositionalProbabilites[State0_] := Module[{State=State0},
    Return[Simplify[Total[State*Conjugate[State],{2}]]]];
+
+ClassicStatesToPositionalProbabilites[State0_] := Module[{State=State0},
+   Return[Simplify[Total[State,{2}]]]];
 
 CumulativeMean[List0_] := Module[{List = List0}, 
    Return[Accumulate[List]/Range[Length[List]]
